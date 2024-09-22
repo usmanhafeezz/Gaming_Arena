@@ -1,0 +1,258 @@
+:root{
+    --marigold: hsl(42, 99%, 46%);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #242533;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.login-container {
+    background-color: #282735;
+    padding:40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-container img{
+    width: 60px;
+}
+
+.login-container h2 {
+    margin-bottom: 47px;
+    color: var(--marigold);
+    
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.input-wrapper input {
+    width: calc(100% - 22px);
+    padding: 15px;
+    border: 1px solid #888 ;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+
+}
+
+.input-wrapper label.placeholder {
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.2s ease-out;
+}
+
+.input-wrapper input:focus + label.placeholder,
+.input-wrapper input:not(:placeholder-shown) + label.placeholder {
+    top: -15px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.login-container button {
+    padding: 15px;
+    font-size: 16px;
+    width: calc(100% - 30px);
+    border: none;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    background-color: var(--marigold);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color:goldenrod;
+}
+
+.separator {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.typo-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282735;
+    padding: 0 10px;
+    position: relative;
+    /* display: inline-block;
+    padding: 0 10px;
+    background-color: #282735;
+    position: relative; */
+
+}
+
+.typo-con::before,
+.typo-con::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 15px;
+    border-left: 100px solid #444444;
+   
+  
+    /* content: "";
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: black;
+    z-index: -1; */
+}
+
+/* .typo-con::before {
+    right: 100%;
+    margin-right: 15px;
+} */
+
+/* .typo-con::after {
+    left: 100%;
+    margin-left: 15px;
+} */
+
+.typo-con-root {
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+    /* color: rgba(0, 0, 0, 0.87); */
+}
+
+.custom-xbox-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; /* Adjust as necessary for spacing */
+  }
+  
+  .custom-xbox-button {
+    background-color: #107c10;
+    border: none;
+    width: 40px; /* Width of the small box */
+    height: 40px; /* Height of the small box */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button */
+  }
+  
+  .custom-xbox-button:hover {
+    background-color: #0d5d0d;
+  }
+  
+  .custom-xbox-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+/* images */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.image-container {
+    width: 100%;
+    padding-top: 100%; /* This maintains the square aspect ratio */
+    position: relative;
+    margin-left: 11px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 15px;
+    box-sizing: border-box;
+    left: 0;
+    border-radius: 5px;
+    width: 79px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: #282735;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

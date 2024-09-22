@@ -1,0 +1,464 @@
+/* NAVBAR */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #010101;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  height: 90px;
+  background-color: hsl(0, 0%, 10%);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo i {
+  color: #0aa5ff;
+  font-size: 22px;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-left: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 24px;
+  border-right: 1px solid #999999;
+  padding-inline: 24px;
+}
+
+.menu-links a {
+  font-weight: 500;
+  color: #999999;
+  padding: 8px 16px;
+}
+
+.menu-links a:hover {
+  color: white;
+}
+
+.log-in {
+  font-weight: 500;
+  padding: 12px 22px;
+  background-color: transparent;
+  color: #999999;
+  border-radius: 10px;
+  border: 2px solid #0aa5ff;
+  transition: 0.2s;
+}
+.log-in:hover {
+  background-color: #0aa5ff;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 53rem) {
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* ACTION TITLE */
+.action-games-title {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+    color: white;
+    margin-right: 40px;
+}
+
+.action-games {
+    flex: 1;
+    text-align: center;
+    padding: 53px;
+    margin-left: 34px;
+    margin-top: 20px;
+}
+
+/*  */
+/* ACTION CARDS 1 */
+/*  */
+/* ACTION CARDS 1*/
+.action-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    margin-right: -37px;
+}
+
+.action-card {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #010101;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-card .card-title,
+.action-card .card-subtitle,
+.action-card .card-highlight,
+.action-card .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles ACTION*/
+/* card titles */
+#action-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#action-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#action-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#action-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#action-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#action-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#action-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#action-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#action-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#action-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#action-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#action-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#action-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#action-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#action-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#action-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#action-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#action-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#action-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#action-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#action-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#action-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#action-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#action-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#action-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+
+/* FOR PATHS */
+.action-card a{
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.action-card a:visited{
+    color: inherit; /* Inherit color for visited links */
+}
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    margin-right: -40px;
+  }
+  
+  .footer .footer-top {
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -10px;
+  }
+  
+  .footer .footer-brand {
+    max-width: 300px;
+  }
+  
+  .footer .footer-brand .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    /* color: #0aa5ff; */
+    margin: 8px;
+  }
+  
+  .footer .footer-text {
+    margin: 10px;
+    color: #aaa;
+
+  }
+  
+  .footer .contact-icon {
+    margin-right: 10px;
+  }
+  
+  .footer .contact-item .item-text {
+    font-size: 14px;
+  }
+  
+  .footer .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 200px;
+  }
+  
+  .footer .footer-list-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -150px;
+  }
+  
+  .footer .footer-link {
+    display: block;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-size: 14px;
+    margin-left: -150px;
+  }
+  
+  .footer .footer-link:hover {
+    color: white;
+  }
+  
+  .footer .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+  
+  .footer .social-wrapper {
+    max-width: 150px;
+  }
+  
+  .footer .social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    margin-left: -199px;
+  }
+  
+  .footer .social-link {
+    display: block;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .footer .footer-newsletter {
+    max-width: 300px;
+  }
+  
+  .footer .footer-newsletter .email-field {
+    padding: 10px;
+    width: calc(100% - 40px);
+    border: 1px solid #555;
+    border-radius: 5px 0 0 5px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .footer .footer-newsletter .footer-btn {
+    padding: 10px;
+    border: none;
+    background-color: #0aa5ff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .footer .footer-newsletter .footer-btn:hover {
+    background-color: #0088cc;
+  }
+  
+  .footer .footer-bottom {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer .copyright {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .footer .footer-bottom-img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    margin: 18px;
+  }

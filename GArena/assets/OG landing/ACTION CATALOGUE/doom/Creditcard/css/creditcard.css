@@ -1,0 +1,331 @@
+:root{
+    --ff-oxanium: 'Oxanium', cursive;
+    --ff-poppins: 'Poppins', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--ff-poppins);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background: black;
+    background: url(./images/rohit-choudhari-tk2_RBZq7RA-unsplash.jpg) center center / cover no-repeat;
+    padding: 60px;
+}
+
+.container form{
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 50%;
+    padding-top: 12%;
+}
+
+.container form .inputbox{
+    margin-top: 20px;
+    color:#E9A401;
+    font-weight: bold;
+}
+
+.container form .inputbox span{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.container form .inputbox input,
+.container form .inputbox select{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    border:1px solid rgba(0,0,0,.3);
+    color: whitesmoke;
+}
+
+.container form .inputbox option{
+    background-color: #E9A401;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    transition: .2s linear;
+    color: #E9A401;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap: 15px;
+}
+
+.container form .flexbox .inputbox{
+    flex: 1 1 150px;
+}
+
+.container .card-container{
+    margin-bottom: -11%;
+    position: relative;
+    height: 300px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform .4s ease-out;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.container .card-container .image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.container .card-container .image .card-number-box{
+    padding: 30px 0px;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding: 30px 0;
+    font-size: 22px;
+    color: #E9A401;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color: #E9A401;
+    font-weight: bold;
+}
+
+.container .card-container .back{
+    position: absolute;
+    height: 73%;
+    top: 50px;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    padding: 20px 0px;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transition: transform .4s ease-out;
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.container .card-container .back .stripe{
+    background-color: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 30px;
+}
+
+.container .card-container .back .box{
+    padding: 30px 15px;
+}
+
+.container .card-container .back span{
+    color: #E9A401;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 30px;
+    padding: 10px;
+    margin-top: 5px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img {
+    margin-top: 20px;
+    height: 30px;
+}
+
+/* Media Queries */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .container form {
+        width: 70%;
+        padding-top: 15%;
+    }
+
+    .container .card-container {
+        width: 350px;
+        height: 250px;
+    }
+
+    .container .card-container .front, 
+    .container .card-container .back {
+        top: 40px;
+    }
+
+    .container .card-container .image img {
+        height: 40px;
+    }
+
+    .container .card-container .front .card-number-box,
+    .container .card-container .back .box .cvv-box {
+        font-size: 20px;
+    }
+}
+
+/* Large Mobile Screens (max-width: 425px) */
+@media (max-width: 425px) {
+    .container {
+        padding: 20px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .container form {
+        width: 100%;  /* Increased from 90% to 95% to ensure it fits better */
+        padding-top: 20%;
+        margin: 0 auto;  /* Ensures the form is centered */
+    }
+
+    .container .card-container {
+        width: 300px;
+        height: 200px;
+    }
+
+    .container .card-container .front, 
+    .container .card-container .back {
+        top: 30px;
+    }
+
+    .container .card-container .image img {
+        height: 30px;
+    }
+
+    .container .card-container .front .card-number-box,
+    .container .card-container .back .box .cvv-box {
+        font-size: 18px;
+    }
+}
+
+
+/* Medium Mobile Screens (max-width: 375px) */
+@media (max-width: 375px) {
+    .container {
+        padding: 15px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .container form {
+        width: 100%;
+        padding-top: 25%;
+    }
+
+    .container .card-container {
+        width: 280px;
+        height: 180px;
+    }
+
+    .container .card-container .front, 
+    .container .card-container .back {
+        top: 20px;
+    }
+
+    .container .card-container .image img {
+        height: 25px;
+    }
+
+    .container .card-container .front .card-number-box,
+    .container .card-container .back .box .cvv-box {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile Screens (max-width: 320px) */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .container form {
+        width: 100%;
+        padding-top: 30%;
+    }
+
+    .container .card-container {
+        width: 250px;
+        height: 150px;
+    }
+
+    .container .card-container .front, 
+    .container .card-container .back {
+        top: 10px;
+    }
+
+    .container .card-container .image img {
+        height: 20px;
+    }
+
+    .container .card-container .front .card-number-box,
+    .container .card-container .back .box .cvv-box {
+        font-size: 14px;
+    }
+}

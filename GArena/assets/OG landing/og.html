@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+
+    <link rel="Shortcut Icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <input type="text" id="searchInput" placeholder="Search games...">
+            <button id="searchButton">Search</button>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+
+        <div class="popular-genres-section">
+            <div class="popular-genres" id="popularGenres">
+                <h2>Popular Genres</h2>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prevSlide">‹</button>
+                <button id="nextSlide">›</button>
+            </div>
+        </div>
+
+        <div class="genre-cards-container">
+        <div class="genre-cards" id="genreCards"> 
+            Genre cards will be dynamically added here 
+         </div>
+    </div>
+
+
+          <div class="dropdown-section">
+            <label class="dropdown-label"><span>Show:</span></label>
+            <div class="dropdown">
+                <button class="dropdown-button" id="browse-sort_toggle" aria-haspopup="true" aria-controls="browse-sort_menu" aria-expanded="false">
+                    <div class="dropdown-text"><span>New Release</span></div>
+                    <div class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.707 9.707L12 16.414 5.293 9.707l1.414-1.414L12 13.586l5.293-5.293 1.414 1.414z"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="dropdown-menu" id="browse-sort_menu">
+                    <ul>
+                      <li data-value="New Release">New Release</li>
+                        <li data-value="All">All</li>
+                        <li data-value="Coming Soon">Coming Soon</li>
+                        <li data-value="Price: High to Low">Price: High to Low</li>
+                        <li data-value="Price: Low to High">Price: Low to High</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- New Section for Additional Cards -->
+        <div class="additional-cards" id="additionalCards">
+            <div class="additional-card" id="card1">
+                <a href="Newly Released/capes/capes.html">
+                <img src="Newly Released/capes.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Capes</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">4,000PKR</p>
+                </a>
+            </div>
+            <div class="additional-card" id="card2">
+                <a href="Newly Released/POP/pop.html">
+                <img src="Newly Released/POP2024.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">POP: The Lost Crown</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,349PKR</p>
+            </a>
+            </div>
+            <div class="additional-card" id="card3">
+                <a href="Newly Released/HW3/HW3.html">
+                <img src="Newly Released/HW3.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">HOMEWORLD 3</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">16,699PKR</p>
+                </a>
+            </div>
+            <div class="additional-card" id="card4">
+                <a href="https://wwe.2k.com/2k24/">
+                <img src="Newly Released/wwe2k24.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">WWE 2K24</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">19,482PKR</p>
+                </a>
+            </div>
+            <div class="additional-card" id="card5">
+                <a href="Newly Released/FF7/ff7.html">
+                <img src="Newly Released/finalfantasy7R.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">FINAL FANTASY VII</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">15,307PKR</p>
+                </a>
+            </div>
+        </div>
+        
+        
+        <!-- New Section for Additional Cards L2 -->
+        <div class="additional-cards2" id="additionalCards2">
+            <div class="additional-card2" id="L2-card1">
+                <a href="Newly Released/mirror/mirror.html">
+                <img src="Newly Released/mirror.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Mirror's Edge™</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">5,559PKR</p>
+                </a>
+            </div>
+            <div class="additional-card2" id="L2-card2">
+                <a href="Newly Released/drive/drive.html">
+                <img src="Newly Released/Pacific.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">PACIFIC DRIVE</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,346PKR</p>
+                </a>
+            </div>
+            <div class="additional-card2" id="L2-card3">
+                <a href="Newly Released/castle/castle.html">
+                <img src="Newly Released/darkest.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Darkestville Castle</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">1,943PKR</p>
+                </a>
+            </div>
+            <div class="additional-card2" id="L2-card4">
+                <a href="Newly Released/fungus/fungus.html">
+                <img src="Newly Released/fungus.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Lone Fungus</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">2,583PKR</p>
+                </a>
+            </div>
+            <div class="additional-card2" id="L2-card5">
+                <a href="Newly Released/lords/lords.html">
+                <img src="Newly Released/manor.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Manor Lords</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">5,559PKR</p>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- New Section for Additional Cards L3 -->
+        <div class="additional-cards3" id="additionalCards3">
+            <div class="additional-card3" id="L3-card1">
+                <a href="Newly Released/tales/tales.html">
+                <img src="Newly Released/zau.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Tales of Kenzera™</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">5,559PKR</p>
+                </a>
+            </div>
+            <div class="additional-card3" id="L3-card2">
+                <a href="Newly Released/roads/roads.html">
+                <img src="Newly Released/roads.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Broken Roads</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">4,530PKR</p>
+                </a>
+            </div>
+            <div class="additional-card3" id="L3-card3">
+                <a href="Newly Released/indika/indika.html">
+                <img src="Newly Released/indika.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Indika</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">6,949PKR</p>
+                </a>
+            </div>
+            <div class="additional-card3" id="L3-card4">
+                <a href="Newly Released/outlast/outlast.html">
+                <img src="Newly Released/outlasttrials.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">The Outlast Trials</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">11,121PKR</p>
+                </a>
+            </div>
+            <div class="additional-card3" id="L3-card5">
+                <a href="Newly Released/kenshi/kenshi.html">
+                <img src="Newly Released/kenshi.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Kenshi</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">3,890PKR</p>
+                </a>
+            </div>
+        </div>
+
+        
+        <!-- New Section for Additional Cards L4 -->
+        <div class="additional-cards4" id="additionalCards4">
+            <div class="additional-card4" id="L4-card1">
+                <a href="Newly Released/ultros/ultros.html">
+                <img src="Newly Released/Ultros.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Ultros</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">6,949PKR</p>
+                </a>
+            </div>
+            <div class="additional-card4" id="L4-card2">
+                <a href="Newly Released/creaks/creaks.html">
+                <img src="Newly Released/creaks.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">CREAKS</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">5,562PKR</p>
+                </a>
+            </div>
+            <div class="additional-card4" id="L4-card3">
+                <a href="Newly Released/war/war.html">
+                <img src="Newly Released/menofwar.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">MEN OF WAR 2</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">12,511PKR</p>
+                </a>
+            </div>
+            <div class="additional-card4" id="L4-card4">
+                <a href="Newly Released/fable/fable.html">
+                <img src="Newly Released/fabledom.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">FABLEDOM</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">2,781PKR</p>
+                </a>
+            </div>
+            <div class="additional-card4" id="L4-card5">
+                <a href="Newly Released/wayout/wayout.html">
+                <img src="Newly Released/wayout.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">A WAY OUT</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,340PKR</p>
+                </a>
+            </div>
+        </div>
+        <!-- END OF NEW RELEASE -->
+
+
+        <!-- New Section for Additional Cards Low to High -->
+        <div class="lowtohigh-cards1" id="LHCards1" style="display: none;">
+            <div class="lowtohigh-card1" id="LH1-card1">
+                <a href="Low to High/doom/doom.html">
+                <img src="Low to High/doom.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">DOOM 3</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card1" id="LH1-card2">
+                <a href="Low to High/plants/plants.html">
+                <img src="Low to High/plants.png" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Plants vs Zombies</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card1" id="LH1-card3">
+                <a href="Low to High/doomsday/dooms.html">
+                <img src="Low to High/doomsday.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Doomsday</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card1" id="LH1-card4">
+                <a href="Low to High/inside/inside.html">
+                <img src="Low to High/inside.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">INSIDE</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card1" id="LH1-card5">
+                <a href="Low to High/gangster/gangs.html">
+                <img src="Low to High/gangs.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Gangster City</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- New Section for Additional Cards Low to High 2-->
+        <!-- <div class="lowtohigh-cards2" id="LHCards2" style="display: none;">
+            <div class="lowtohigh-card2" id="LH2-card1">
+                <a href="path_to_game1">
+                <img src="Low to High/cargo.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Truck Simulator</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">FREE</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card2" id="LH2-card2">
+                <a href="path_to_game1">
+                <img src="Low to High/drift.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Extreme Car Drift</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">100PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card2" id="LH2-card3">
+                <a href="path_to_game1">
+                <img src="Low to High/police.avif" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Police Simulator</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">113PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card2" id="LH2-card4">
+                <a href="path_to_game1">
+                <img src="Low to High/killfish.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Kill Fish</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">113PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card2" id="LH2-card5">
+                <a href="path_to_game1">
+                <img src="Low to High/picklock.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Pick Lock</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">115PKR</p>
+                </a>
+            </div>
+        </div> -->
+
+
+        <!-- New Section for Additional Cards Low to High 3-->
+        <div class="lowtohigh-cards3" id="LHCards3" style="display: none;">
+            <div class="lowtohigh-card3" id="LH3-card1">
+                <a href="Low to High/busway/bus.html">
+                <img src="Low to High/bus.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Busway Islands</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">150PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card3" id="LH3-card2">
+                <a href="Low to High/farm/farm.html">
+                <img src="Low to High/farm.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Farm Day</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">180PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card3" id="LH3-card3">
+                <a href="Low to High/among/among.html">
+                <img src="Low to High/amongus.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Among Us</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">250PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card3" id="LH3-card4">
+                <a href="Low to High/gta3/gta3.html">
+                <img src="Low to High/gta3.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">GTA 3</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">250PKR</p>
+                </a>
+            </div>
+            <div class="lowtohigh-card3" id="LH3-card5">
+                <a href="Low to High/gtavc/gtavc.html">
+                <img src="Low to High/vice.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">GTA VC</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">250PKR</p>
+                </a>
+            </div>
+        </div>
+        <!-- END OF LOW TO HIGH -->
+
+         <!-- New Section for Additional Cards High to Low 1-->
+         <!-- <div class="hightolow-cards1" id="HLCards1" style="display: none;">
+            <div class="hightolow-card1" id="HL-card1">
+                <a href="path_to_game1">
+                <img src="High to Low/ghost.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Ghost of Tsushima</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">17,066PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card1" id="HL-card2">
+                <a href="path_to_game1">
+                <img src="High to Low/crew2.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">The Crew 2</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">12,314PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card1" id="HL-card3">
+                <a href="path_to_game1">
+                <img src="High to Low/hot.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">HOT WHEELS UNLEASHED™</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">11,121PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card1" id="HL-card4">
+                <a href="path_to_game1">
+                <img src="High to Low/alan2.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Alan Wake 2</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">9,447PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card1" id="HL-card5">
+                <a href="path_to_game1">
+                <img src="High to Low/redfall.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">REDFALL</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,898PKR</p>
+                </a>
+            </div>
+        </div> -->
+
+        <!-- New Section for Additional Cards High to Low 2-->
+        <div class="hightolow-cards2" id="HLCards2" style="display: none;">
+            <div class="hightolow-card2" id="HL2-card1">
+                <a href="High to Low/tomb/tomb.html">
+                <img src="High to Low/tomb.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Shadow of the Tomb Raider: Definitive Edition</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,451PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card2" id="HL2-card2">
+                <a href="High to Low/moto/moto.html">
+                <img src="High to Low/motogp.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">MotoGP™21</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,451PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card2" id="HL2-card3">
+                <a href="High to Low/mortal/mortal.html">
+                <img src="High to Low/mk1.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Mortal Kombat 1</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,011PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card2" id="HL2-card4">
+                <a href="High to Low/war/war.html">
+                <img src="High to Low/war.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">War Hospital</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">8,011PKR</p>
+                </a>
+            </div>
+            <div class="hightolow-card2" id="HL2-card5">
+                <a href="High to Low/skulls/skulls.html">
+                <img src="High to Low/skull.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Skull and Bones</p>
+                <p class="card-highlight">NOW ON GA</p>
+                <p class="card-price">7,417PKR</p>
+                </a>
+            </div>
+        </div>
+        <!-- END OF HIGH TO LOW -->
+
+         <!-- New Section for Additional Cards COMING SOON 1-->
+        <div class="comingsoon-cards1" id="CSCards1" style="display: none;">
+            <div class="comingsoon-card1" id="CS-card1">
+                <a href="path_to_game1">
+                <img src="Coming Soon/acjapan.webp" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Assassin’s Creed Shadows</p>
+                <p class="card-highlight">Available 11/15/24</p>
+                <p class="card-price">18,542PKR</p>
+                </a>
+            </div>
+            <div class="comingsoon-card1" id="CS-card2">
+                <a href="path_to_game1">
+                <img src="Coming Soon/star.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Star Wars Outlaws</p>
+                <p class="card-highlight">Available 08/30/24</p>
+                <p class="card-price">18,542PKR</p>
+                </a>
+            </div>
+            <div class="comingsoon-card1" id="CS-card3">
+                <a href="path_to_game1">
+                <img src="Coming Soon/gow.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">God of War Ragnarök</p>
+                <p class="card-highlight">Available 09/19/24</p>
+                <p class="card-price">17,061PKR</p>
+                </a>
+            </div>
+            <div class="comingsoon-card1" id="CS-card4">
+                <a href="https://store.epicgames.com/en-US/p/decadent-e21417" target="_blank">
+                <img src="Coming Soon/dec.webp" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Decadent</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">19,482PKR</p> -->
+                </a>
+            </div>
+            <div class="comingsoon-card1" id="CS-card5">
+                <a href="https://store.epicgames.com/en-US/p/once-human-b5c5761" target="_blank">
+                <img src="Coming Soon/human.jpg" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Once Human</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">15,307PKR</p> -->
+                </a>
+            </div>
+        </div>
+
+        <!-- New Section for Additional Cards COMING SOON 2-->
+        <div class="comingsoon-cards2" id="CSCards2" style="display: none;">
+            <div class="comingsoon-card2" id="CS2-card1">
+                <a href="path_to_game1">
+                <img src="Coming Soon/war.jpg" alt="Card 1">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Warhammer 40,000</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">4,000PKR</p> -->
+                </a>
+            </div>
+            <div class="comingsoon-card2" id="CS2-card2">
+                <a href="https://store.epicgames.com/en-US/p/black-myth-wukong-87a72b" target="_blank">
+                <img src="Coming Soon/black.jpg" alt="Card 2">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Black Myth: Wukong</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">8,349PKR</p> -->
+                </a>
+            </div>
+            <div class="comingsoon-card2" id="CS2-card3">
+                <a href="https://store.epicgames.com/en-US/p/stalker-2-heart-of-chornobyl" target="_blank">
+                <img src="Coming Soon/stalk.jpg" alt="Card 3">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">S.T.A.L.K.E.R. 2</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">16,699PKR</p> -->
+                </a>
+            </div>
+            <div class="comingsoon-card2" id="CS2-card4">
+                <a href="https://store.epicgames.com/en-US/p/life-by-you" target="_blank">
+                <img src="Coming Soon/life.jpg" alt="Card 4">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Life by You</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">19,482PKR</p> -->
+                </a>
+            </div>
+            <div class="comingsoon-card2" id="CS2-card5">
+                <a href="https://store.epicgames.com/en-US/p/commandos-origins-ec78ba" target="_blank">
+                <img src="Coming Soon/commando.webp" alt="Card 5">
+                <p class="card-title">Base Game</p>
+                <p class="card-subtitle">Commandos: Origins</p>
+                <p class="card-highlight">Coming Soon</p>
+                <!-- <p class="card-price">15,307PKR</p> -->
+                </a>
+            </div>
+        </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,2340 @@
+/* Define dark mode styles for the entire body */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Ensure all text elements are white in dark mode */
+body.dark-mode, body.dark-mode * {
+    color: white !important;
+}
+
+/* Apply dark mode to genre cards */
+.dark-mode .genre-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+/* Apply dark mode to additional cards */
+.dark-mode .additional-card, .dark-mode .additional-card2, .dark-mode .additional-card3, .dark-mode .additional-card4, .dark-mode .lowtohigh-card1, .dark-mode .lowtohigh-card2, .dark-mode .lowtohigh-card3, .dark-mode .hightolow-card1, .dark-mode .hightolow-card2, .dark-mode .comingsoon-card1, .dark-mode .comingsoon-card2{
+    background-color: #1e1e1e;
+    /* border: 1px solid #333; */
+}
+
+/* Ensure text inside cards is white */
+.dark-mode .genre-card p, 
+.dark-mode .additional-card p, 
+.dark-mode .additional-card2 p, 
+.dark-mode .additional-card3 p, 
+.dark-mode .additional-card4 p,
+.dark-mode .lowtohigh-card1 
+.dark-mode .lowtohigh-card2
+.dark-mode .lowtohigh-card3
+.dark-mode .hightolow-card1
+.dark-mode .hightolow-card2
+.dark-mode .comingsoon-card1
+.dark-mode .comingsoon-card2{
+    color: white;
+}
+
+.dark-mode .container{
+    background-color: #1e1e1e;
+}
+
+/* Dropdown menu styles */
+.dark-mode #browse-sort_menu {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode #browse-sort_menu li {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Ensure other elements like buttons and inputs are styled appropriately */
+.dark-mode input, .dark-mode button {
+    background-color: #333;
+    color: white;
+    /* border: 1px solid #555; */
+}
+
+/* Add button style for toggle */
+#darkModeToggle {
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 532px;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Input and button styles in header */
+.header input, .header button {
+    padding: 10px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+.search-bar .search-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-bar .search-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.popular-genres-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.popular-genres {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Styles for genre cards */
+
+.genre-cards-container {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.genre-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    transition: transform 0.5s ease;
+    transform: translateX(0); /* Initial position */
+    overflow: hidden;
+}
+
+.genre-card {
+    flex: 0 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.genre-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.genre-card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.genre-card:hover img {
+    transform: scale(1.1);
+}
+
+.genre-card p {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    text-decoration: none  !important; /* Remove underline */
+    color: black; /* Change text color */
+}
+
+.genre-card:hover p {
+    color: #333;
+}
+
+.genre-card a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+/* Drop Down */
+.dropdown-section {
+    margin-top: 20px;
+}
+
+.dropdown-label {
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-text {
+    margin-right: 10px;
+}
+
+.dropdown-icon {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px; /* Adjust this if necessary */
+    z-index: 1000;
+    width: 100%;
+    bottom: 100%; /* Position the dropdown menu above the button */
+    transform: translateY(-5px); /* Slightly move the menu upwards */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Additional Cards */
+.additional-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.additional-card {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.additional-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.additional-card .card-title,
+.additional-card .card-subtitle,
+.additional-card .card-highlight,
+.additional-card .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles */
+/* card titles */
+#card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -30px;
+}
+
+#card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: -23px;
+    margin-top: 1px;
+}
+
+#card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -112px;
+}
+
+#card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -68px;
+}
+
+#card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -130px;
+}
+
+/* card highlights */
+#card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#card1 .card-price{
+    margin-left: -107px;
+    margin-right: -30px;
+}
+
+#card2 .card-price{
+    margin-left: -107px;
+    margin-right: -30px;
+}
+
+#card3 .card-price{
+    margin-left: -107px;
+    margin-right: -45px;
+}
+
+#card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#card5 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+/* Individual card image styles */
+#card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+#card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 43px; /* Add space below the image */
+}
+
+#card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Additional Cards 2 */
+.additional-cards2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.additional-card2 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.additional-card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.additional-card2 .card-title,
+.additional-card2 .card-subtitle,
+.additional-card2 .card-highlight,
+.additional-card2 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles LLLLLLLLLLL-2*/
+/* card titles */
+#L2-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#L2-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#L2-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#L2-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#L2-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#L2-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#L2-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#L2-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#L2-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#L2-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#L2-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L2-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L2-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L2-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L2-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#L2-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#L2-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#L2-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#L2-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#L2-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#L2-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#L2-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#L2-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#L2-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#L2-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+/* Additional Cards 3 */
+.additional-cards3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.additional-card3 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.additional-card3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.additional-card3 .card-title,
+.additional-card3 .card-subtitle,
+.additional-card3 .card-highlight,
+.additional-card3 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles LLLLLLLLLLLLL- 3 */
+/* card titles */
+#L3-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#L3-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#L3-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#L3-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#L3-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#L3-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -121px;
+}
+
+#L3-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 33px;
+}
+
+#L3-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -38px;
+}
+
+#L3-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -110px;
+}
+
+#L3-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -36px;
+}
+
+/* card highlights */
+#L3-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L3-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L3-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L3-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L3-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#L3-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -39px;
+}
+
+#L3-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -33px;
+}
+
+#L3-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -45px;
+}
+
+#L3-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -43px;
+}
+
+#L3-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+/* Individual card image styles */
+#L3-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 58px; /* Add space below the image */
+}
+
+#L3-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#L3-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 104px; /* Add space below the image */
+}
+
+#L3-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 37px; /* Add space below the image */
+}
+
+#L3-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 44px; /* Add space below the image */
+}
+
+/* Additional Cards 4 */
+.additional-cards4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.additional-card4 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.additional-card4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.additional-card4 .card-title,
+.additional-card4 .card-subtitle,
+.additional-card4 .card-highlight,
+.additional-card4 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles LLLLLLLLLLLLLLLLLLLLL- 4*/
+/* card titles */
+#L4-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#L4-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#L4-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#L4-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#L4-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#L4-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -30px;
+}
+
+#L4-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 68px;
+}
+
+#L4-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -110px;
+}
+
+#L4-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+#L4-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -73px;
+}
+
+/* card highlights */
+#L4-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L4-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#L4-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L4-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#L4-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#L4-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#L4-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#L4-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -48px;
+}
+
+#L4-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#L4-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+/* Individual card image styles */
+#L4-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 59px; /* Add space below the image */
+}
+
+#L4-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#L4-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#L4-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 30px; /* Add space below the image */
+}
+
+#L4-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 39px; /* Add space below the image */
+}
+/* END OF NEW RELEASED */
+
+/* Low to High 1 */
+.lowtohigh-cards1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lowtohigh-card1 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lowtohigh-card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lowtohigh-card1 .card-title,
+.lowtohigh-card1 .card-subtitle,
+.lowtohigh-card1 .card-highlight,
+.lowtohigh-card1 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 1*/
+/* card titles */
+#LH1-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#LH1-card2.card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#LH1-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#LH1-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#LH1-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#LH1-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#LH1-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#LH1-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#LH1-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#LH1-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#LH1-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH1-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH1-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH1-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH1-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#LH1-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#LH1-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#LH1-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#LH1-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#LH1-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#LH1-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#LH1-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH1-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH1-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#LH1-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+
+/* Low to High 2 */
+.lowtohigh-cards2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lowtohigh-card2 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lowtohigh-card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lowtohigh-card2 .card-title,
+.lowtohigh-card2 .card-subtitle,
+.lowtohigh-card2 .card-highlight,
+.lowtohigh-card2 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 2*/
+/* card titles */
+#LH2-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#LH2-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#LH2-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#LH2-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#LH2-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#LH2-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#LH2-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#LH2-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#LH2-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#LH2-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#LH2-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH2-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH2-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH2-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH2-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#LH2-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#LH2-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#LH2-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#LH2-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#LH2-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#LH2-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#LH2-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH2-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH2-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#LH2-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+
+/* Low to High 3 */
+.lowtohigh-cards3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lowtohigh-card3 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lowtohigh-card3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lowtohigh-card3 .card-title,
+.lowtohigh-card3 .card-subtitle,
+.lowtohigh-card3 .card-highlight,
+.lowtohigh-card3 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 3*/
+/* card titles */
+#LH3-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#LH3-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#LH3-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#LH3-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#LH3-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#LH3-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#LH3-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#LH3-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#LH3-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#LH3-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#LH3-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH3-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#LH3-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH3-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#LH3-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#LH3-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#LH3-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#LH3-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#LH3-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#LH3-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#LH3-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#LH3-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH3-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#LH3-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#LH3-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+/* END OF LOW TO HIGH */
+
+/* High to Low 1 */
+.hightolow-cards1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hightolow-card1 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.hightolow-card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hightolow-card1 .card-title,
+.hightolow-card1 .card-subtitle,
+.hightolow-card1 .card-highlight,
+.hightolow-card1 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 3*/
+/* card titles */
+#HL-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#HL-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#HL-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#HL-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+#HL-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#HL-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#HL-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#HL-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#HL-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#HL-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#HL-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#HL-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#HL-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#HL-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#HL-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#HL-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#HL-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#HL-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#HL-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#HL-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#HL-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#HL-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#HL-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#HL-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#HL-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+/* High to Low 2 */
+.hightolow-cards2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hightolow-card2 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.hightolow-card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hightolow-card2 .card-title,
+.hightolow-card2 .card-subtitle,
+.hightolow-card2 .card-highlight,
+.hightolow-card2 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 3*/
+/* card titles */
+#HL2-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#HL2-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+}
+
+#HL2-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+}
+
+#HL2-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+#HL2-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+}
+
+/* card subtitles */
+#HL2-card1 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -96px;
+}
+
+#HL2-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#HL2-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#HL2-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#HL2-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#HL2-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#HL2-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#HL2-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#HL2-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#HL2-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#HL2-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#HL2-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#HL2-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#HL2-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#HL2-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#HL2-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#HL2-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#HL2-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#HL2-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#HL2-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+/* END OF HIGH TO LOW */
+
+
+/* COMING SOON 1 */
+.comingsoon-cards1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.comingsoon-card1 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.comingsoon-card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comingsoon-card1 .card-title,
+.comingsoon-card1 .card-subtitle,
+.comingsoon-card1 .card-highlight,
+.comingsoon-card1 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Individual card styles L to H - 3*/
+/* card titles */
+#CS-card1 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+} 
+
+#CS-card2 .card-title{
+    margin-left: -77px;
+    font-size: smaller;
+    margin-top: 28px;
+}
+
+#CS-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+    margin-top: 106px;
+}
+
+#CS-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+    margin-top: 79px;
+}
+#CS-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+    margin-top: 63px;
+}
+
+/* card subtitles */
+#CS-card1 .card-subtitle{
+    margin-left: -93px;
+    margin-right: -96px;
+}
+
+#CS-card2 .card-subtitle{
+    margin-left: -15px;
+    margin-right: 17px;
+}
+
+#CS-card3 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -122px;
+}
+
+#CS-card4 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -79px;
+}
+
+#CS-card5 .card-subtitle{
+    margin-left: -132px;
+    margin-right: -74px;
+}
+
+/* card highlights */
+#CS-card1 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#CS-card2 .card-highlight{
+    margin-left: -82px;
+    font-size: x-small;
+}
+
+#CS-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#CS-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#CS-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#CS-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#CS-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#CS-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#CS-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#CS-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#CS-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#CS-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#CS-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#CS-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#CS-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+/* COMING SOON 2*/
+.comingsoon-cards2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.comingsoon-card2 {
+    flex: 1 1 calc(20% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.comingsoon-card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comingsoon-card2 .card-title,
+
+.comingsoon-card2 .card-highlight,
+.comingsoon-card2 .card-price {
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+    
+}
+.comingsoon-card2 .card-subtitle{
+    padding-left: 50px;
+    
+}
+
+
+/* Individual card styles L to H - 3*/
+/* card titles */
+#CS2-card1 .card-title{
+        margin-left: -65px;
+        font-size: smaller;
+        margin-bottom: -18px;
+
+} 
+
+#CS2-card2 .card-title{
+    margin-left: -33px;
+    font-size: smaller;
+    margin-top: 70px;
+}
+
+#CS2-card3 .card-title{
+    margin-left: -70px;
+    font-size: smaller;
+    margin-bottom: -45px;
+    margin-top: 76px;
+}
+
+#CS2-card4 .card-title{
+    margin-left: -76px;
+    font-size: smaller;
+    margin-bottom: -45px;
+    margin-top: 76px;
+
+}
+#CS2-card5 .card-title {
+    margin-left: -76px;
+    font-size: smaller;
+    margin-top: 85px;
+}
+
+/* card subtitles */
+#CS2-card1 .card-subtitle{
+    margin-left: -147px;
+    margin-right: -96px;
+}
+
+#CS2-card2 .card-subtitle{
+    margin-left: -55px;
+    margin-right: 17px;
+    margin-top: -4px;
+}
+
+#CS2-card3 .card-subtitle{
+    margin-left: -196px;
+    margin-right: -122px;
+    margin-top: 40px;
+}
+
+#CS2-card4 .card-subtitle{
+    margin-left: -185px;
+    margin-right: -66px;
+    margin-top: 10px;
+}
+
+#CS2-card5 .card-subtitle{
+        margin-left: -123px;
+    margin-right: -74px;
+    margin-top: -5px;
+}
+
+/* card highlights */
+#CS2-card1 .card-highlight{
+    margin-left: -74px;
+    font-size: x-small;
+    margin-top: -18px;
+}
+
+#CS2-card2 .card-highlight{
+    margin-left: -40px;
+    font-size: x-small;
+    margin-top: -17px;
+}
+
+#CS2-card3 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+    margin-top: -17px;
+}
+
+#CS2-card4 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+#CS2-card5 .card-highlight{
+    margin-left: -70px;
+    font-size: x-small;
+}
+
+/* card prices */
+#CS2-card1 .card-price{
+    margin-left: -107px;
+    margin-right: -35px;
+}
+
+#CS2-card2 .card-price{
+    margin-left: -107px;
+    margin-right: -36px;
+}
+
+#CS2-card3 .card-price{
+    margin-left: -107px;
+    margin-right: -38px;
+}
+
+#CS2-card4 .card-price{
+    margin-left: -107px;
+    margin-right: -40px;
+}
+
+#CS2-card5 .card-price{
+    margin-left: -107px;
+    margin-right: -37px;
+}
+
+/* Individual card image styles */
+#CS2-card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 86px; /* Add space below the image */
+}
+
+#CS2-card2 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#CS2-card3 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 32px; /* Add space below the image */
+}
+
+#CS2-card4 img {
+    width: 100%;
+    height: auto;
+    max-height: 298px;
+    object-fit: cover;
+    margin-bottom: 29px; /* Add space below the image */
+}
+
+#CS2-card5 img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 50px; /* Add space below the image */
+}
+/* END OF COMING SOON */
+
+/* FOR ADDING PATH */
+.additional-card a,
+.additional-card2 a,
+.additional-card3 a,
+.additional-card4 a,
+.lowtohigh-card1 a,
+.lowtohigh-card2 a,
+.lowtohigh-card3 a,
+.hightolow-card1 a,
+.hightolow-card2 a,
+.comingsoon-card1 a,
+.comingsoon-card2 a{
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Additional CSS styles for visited links (optional) */
+.additional-card a:visited,
+.additional-card2 a:visited,
+.additional-card3 a:visited,
+.additional-card4 a:visited,
+.lowtohigh-card1 a:visited,
+.lowtohigh-card2 a:visited,
+.lowtohigh-card3 a:visited,
+.hightolow-card1 a:visited,
+.hightolow-card2 a:visited,
+.comingsoon-card1 a:visited,
+.comingsoon-card2 a:visited{
+    color: inherit; /* Inherit color for visited links */
+}
+

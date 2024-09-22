@@ -1,0 +1,865 @@
+:root{
+    --main-color:hsl(42, 99%, 46%);
+    /* second color Choice */
+    --dark-color: #1b182b;
+    --light-color: #322f40;
+    --text-color: hsl(0,0%,91%);
+    --shadow-4: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.15);
+    --english-violet: hsl(274, 21%, 23%);
+    -marigold_75: hsla(42, 99%, 46%, 0.75);
+--xiketic_90: hsla(280, 37%, 8%, 0.9);
+--marigold: hsl(42, 99%, 46%);
+--raisin-black-3: hsl(280, 11%, 11%);
+
+--eerie-black-1: hsl(277, 25%, 10%);
+--eerie-black-2: hsl(280, 7%, 8%);
+
+/* >>>>>>> Typography >>>>> */
+--ff-oxanium: 'Oxanium', cursive;
+--ff-poppins: 'Poppins', sans-serif;}
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #1C1C1C;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* position: fixed; */
+    align-items: flex-start; /* Align items to the top */
+    background-color: transparent;
+}
+
+.sidebar {
+    width: 300px; /* Set a fixed width for the sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Existing styles */
+.sidebar img {
+    width: 30%;
+    align-items: center;
+    margin: 130px 90px;
+}
+
+.gta-logo {
+        width: 215px;
+        height: 140px;
+        margin-right: -140px;
+        margin-left: -63px;
+        margin-top: -36px;
+}
+
+.Base-Game {
+    /* Existing styles for the Base Game section... */
+    width: 70%; /* Adjust width as needed */
+}
+
+
+/* Base game box */
+.Box {
+    border: 1px solid #333333;
+    background-color: #333333;
+    color: white;
+    width: 70px;
+    height: 5vh;
+    border-radius: 3px;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+.Box p {
+    font-family: sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 15px;
+    padding-left: 1px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Offer box */
+.sidebar .offer {
+    color: white;
+    border: 1px solid black;
+    background-color: green;
+    margin-top: 10px;
+    border-radius: 3px;
+    width: 40px;
+    box-sizing: border-box;
+}
+.sidebar .offer p {
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 10px;
+    line-height: 5px;
+}
+/* Price */
+.Price .line-through{
+    text-decoration: line-through;
+    font-weight: bolder;
+    opacity: 0.5;
+}
+.Price .plain-text{
+    text-decoration: none;
+    color: white;
+}
+.Main-box .Price {
+    color: white;
+}
+
+/* Buttons */
+.btn-groups .buy-now-btn {
+    padding: 8px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    background:var(--marigold);
+    border: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: background 0.5s;
+}
+.btn-groups .buy-now-btn:hover{
+    background: #563434;
+}
+
+/* Add to cart button */
+.btn-groups .add-to-cart-btn {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.btn-groups .add-to-wish-list-btn {
+    margin-top: 6px;
+    width: 100%;
+    height: 49px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid;
+    font-size: 17px;
+}
+
+.btn-groups .bx {
+    color: white;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.btn-groups .SysReq-Detect-btn {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+    background-color: var(--marigold);
+    border: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: background 0.5s;
+    
+}
+.btn-groups .SysReq-Detect-btn:hover{
+    background: #563434;
+
+}
+/* Anchor tag */
+.btn-groups .add-to-cart-btn a,
+.buy-now-btn a,
+.add-to-wish-list-btn a,
+.SysReq-Detect-btn a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Details */
+.details-text {
+    position: relative;
+    padding-bottom: 10px;
+    color: #979797;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.details-text span {
+    margin-left: 35%;
+    color: white;
+}
+
+.details-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #333333;
+    margin-bottom: -2px;
+}
+
+.details-text span .bx {
+    margin-left: 31%;
+}
+
+.details-text .date {
+    margin-left: 50%;
+}
+
+.details-text .Public {
+    margin-left: 38%;
+}
+
+/* Share and Report Button */
+.btn-groups-2 .Share .bx {
+    font-size: 15px;
+}
+
+.btn-groups-2 .Report .bx {
+    font-size: 15px;
+}
+
+.btn-groups-2 .Share {
+    padding-right: 15px;
+    padding: 8px;
+    width: 45%;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.btn-groups-2 .Report {
+    margin-left: 20px;
+    width: 46%;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.btn-groups-2 .Share a,
+.Report a {
+    text-decoration: none;
+    color: white;
+}
+
+/* game details */
+.game-details {
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    padding: 20px;
+    text-align: start;
+}
+
+.game-details h2,h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: lighter;
+    /* text-transform: lowercase; */
+}
+.game-details .Para-01 {
+    padding: 0 15px;
+    font-size: 16px;
+    color: white;
+}
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.rating, .feature {
+    display: inline-block;
+    align-items: center;
+}
+
+.rating span.stars {
+    color: gold;
+    margin-left: 5px;
+}
+
+.trailer {
+    margin-bottom: 20px;
+    
+}
+.trailer iframe{
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.game-details p {
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+
+.additional-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.genre-feature {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.genre {
+    margin-top: 5px;
+    width: 45%;
+    padding-left: 10px;
+    border-left: 1px solid #979797;
+    height: 50px;
+}
+
+.genre strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.genre ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.genre ul li {
+    margin-bottom: 5px;
+}
+
+.additional-details .important-note {
+    font-style: italic;
+    color: #979797;
+    /* padding-right: 0.5%; */
+
+}
+.toggle-content {
+    transition: opacity 200ms ease 0s;
+    border-radius: 4px;
+    background-color: #666666;
+    border: 1px solid #666666 ;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    opacity: 1;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+
+}
+
+.epic-player-ratings {
+    margin-top: 20px;
+    /* margin-left: 15%; */
+     /* Aligns the text to the left */
+}
+
+.epic-player-ratings h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+     /* Adjust to match the left padding of your paragraphs */
+}
+
+.epic-player-ratings .caption {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    margin-left: -140;
+     /* Adjust to match the left padding of your paragraphs */
+}
+
+.epic-player-ratings .rating {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 35px;
+    margin-left: 70%;
+    font-weight:lighter;
+}
+
+/* Competitive Fix */
+.genre-feature {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.genre, .feature {
+    width: 45%;
+}
+.feature{
+    /* margin-top: 2px; */
+    width: 45%;
+    padding-left: 10px;
+    border-left: 1px solid #979797;
+    height: 50px;
+}
+.feature {
+    margin-top: -1px; /* Add margin-top to separate from the genre section */
+
+}
+.feature p {
+color: white;
+margin-top: -24px;
+margin-left: 37px;
+}
+.feature strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.feature img {
+    margin-top: 2px;
+    width: 30px;
+}
+.feature ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature ul li {
+    margin-bottom: 5px;
+}
+
+
+/* icon columns */
+.ratings-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.rating-column {
+    width: calc(50% - 20px); /* Adjust the width of each column */
+}
+
+.rating-item {
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px; /* Add gap above the rectangles */
+    margin-bottom: 20px; /* Add gap below the rectangles */
+    display: flex; /* Display items as flex for icon positioning */
+    align-items: center; /* Center items vertically */
+}
+
+.rating-icon img {
+    width: 40px; /* Adjust the width of the rating icon */
+    height: auto;
+    margin-right: 20px; /* Add space between icon and text */
+}
+
+.rating-text {
+    flex: 1; /* Allow text to take up remaining space */
+}
+
+.rating-text p {
+    margin: 0;
+    font-size: 14px; /* Adjust the font size for the topic */
+    color: #fff; /* Highlight color for the topic */
+    font-weight: normal; /* Remove bold */
+}
+
+.rating-text span {
+    display: block;
+    font-weight: bold;
+    font-size: 18px; /* Adjust the font size for the rating text */
+    color:#fff; /* Highlight color for the rating text */
+}
+
+
+.game-ratings {
+    text-align: left; /* Align the text to the left */
+    margin-left: -330; /* Add left margin to create space from the edge of the page */
+}
+
+/* for all reviews */
+.see-all-reviews {
+    /* background-color: #ffffff; Background color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px; /* Adjust border radius as needed */
+    border: 2px solid #000000; /* Border color */
+    display: inline-block;
+    margin-top: -6px; /* Add some margin to separate from the above content */
+    font-size: 12px; /* Adjust font size as needed */
+    text-decoration: none;
+    color: #000000; /* Text color */
+    font-weight: bold;
+}
+
+.arrow-icon {
+    display: inline-block;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.arrow-svg {
+    fill: #000000; /* Arrow color */
+}
+
+
+/* CSS for rating circles */
+.rating-circle-container {
+    display: flex;
+    justify-content: space-between;
+   
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.rating-circle {
+    width: 150px; /* Adjust width as needed */
+    text-align: center;
+    display: inline-block; /* Display circles inline */
+    margin-right: 20px; 
+    gap: 20px;
+    /* Adjust margin between circles */
+}
+
+.rating-description {
+    font-size: 14px; /* Adjust font size as needed */
+    color: black; /* Text color */
+}
+
+/* CSS for rating circles container */
+.rating-container {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between; /* Add space between circles and "See All Reviews" */
+    align-items: flex-start; /* Align items at the start of the flex container */
+}
+
+/* CSS for rating circle */
+.rating-circle {
+    width: 64px; /* Adjust width as needed */
+    height: 64px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS for rating text */
+.rating-description {
+    color: white;
+    margin-right: 20px;
+    margin-top: 5px; /* Adjust margin between circle and text */
+    font-size: 15px; /* Adjust font size as needed */
+    text-align: end; /* Center text */
+}
+
+/* CSS for "See All Reviews" link */
+.see-all-reviews {
+    font-size: 12px; /* Adjust font size as needed */
+    border: none; /* Remove border */
+    display: inline-block; /* Ensure it doesn't stick to the page */
+    align-items: center;
+    flex-direction: row;
+}
+
+/* CSS for external link icon */
+.external-link-svg {
+    width: 12px; /* Adjust icon size */
+    height: 12px;
+   
+}
+
+.review-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 20px;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    background-color: #262626;
+    scroll-snap-type: x mandatory;
+}
+
+.review-item {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    background-color: #262626;
+    scroll-snap-align: start;
+}
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.review-source {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.review-author .border-line{
+    border-bottom: 1px solid #3C3C3C;
+    margin-top: 20px;
+}
+.review-author {
+    margin-top: 10px;
+    /* border-bottom: 1px solid black; */
+    font-size: 14px;
+    color: #979799;
+}
+
+.review-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.review-score {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.review-content {
+    
+    font-size: 14px;
+    color: #979799;
+    margin-bottom: 10px;
+}
+
+.review-link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    /* color: #007BFF; */
+    text-decoration: none;
+}
+
+.external-link-icon {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.rating-stars {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rating-stars li {
+    margin-right: 5px;
+}
+
+.review-scroll-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.review-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.review-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.review-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.review-scroll-container::-webkit-scrollbar-thumb:horizontal {
+    height: 8px;
+}
+
+.review-scroll-container::-webkit-scrollbar-thumb:vertical {
+    width: 8px;
+}
+
+/* cart */
+
+.custom-cart {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.custom-cart-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-cart-image {
+    flex: 0 0 70px;
+    margin-right: 10px;
+}
+
+.custom-cart-image img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-cart-info {
+    flex-grow: 1;
+    font-size: 12px;
+}
+
+.custom-cart-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-cart-discount {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.custom-cart-prices {
+    margin-bottom: 5px;
+}
+
+.custom-cart-original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.custom-cart-sale-price {
+    color: #000;
+    font-weight: bold;
+}
+
+.custom-cart-time {
+    color: #999;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.custom-cart-buttons button {
+    padding: 3px 6px;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+/* System Requirement CSS  */
+.System-requirement-title{
+    margin-top: 20px;
+    color: White;
+    font-size: 15px;
+    padding: 7px;
+}
+
+.system-requirement{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    background-color: #262626;
+    width: 60%;
+
+}
+.Title{
+    grid-column: span 2;
+    text-align: start;
+    
+}
+.Title h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.Title p {
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 0 10%;
+}
+.system-requirement .Title .border-line-2{
+    border-bottom: 2px solid #3C3C3C;
+    margin-top: 20px;
+}
+
+.Describe{
+    grid-column: span 2;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+.section{
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 5px;
+    border: none;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+.section h3{
+    color: #989898;
+}
+.Title a{
+    margin-left: 40%;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    
+}
+
